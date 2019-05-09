@@ -37,3 +37,18 @@ npm run test:unit
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+Debounce组件会接受time和events（用逗号分隔）的两个参数。
+
+使用示例：
+<div id="app">
+    <Throttle :time="1000" events="click">
+        <button @click="onClick($event, 1)">click+1 {{val}}</button>
+    </Throttle>
+    <Throttle :time="1000" events="click" :isDebounce="true">
+        <button @click="onAdd">click+3 {{val}}</button>
+    </Throttle>
+    <Throttle :time="3300" events="mouseleave" :isDebounce="true">
+        <button @mouseleave.prevent="onAdd">click+3 {{val}}</button>
+    </Throttle>
+</div>
