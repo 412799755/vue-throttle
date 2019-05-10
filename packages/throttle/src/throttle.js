@@ -15,6 +15,7 @@ const throttle = function (fn, wait = 50, isDebounce, ctx) {
     }
   }
 }
+let tmp
 export default {
   name: 'Throttle',
   abstract: true,
@@ -33,8 +34,10 @@ export default {
   },
   render () {
     const vnode = this.$slots.default[0]
+    tmp = vnode
     this.eventKeys.forEach((key) => {
       const target = vnode.data.on[key]
+      console.log(vnode,this.originMap)
       if (target === this.originMap[key] && this.throttledMap[key]) {
         vnode.data.on[key] = this.throttledMap[key]
       } else if (target) {

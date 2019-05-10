@@ -2,17 +2,16 @@
   <div id="app">
     <div>
       <Throttle :time="2000" events="click" :isDebounce="true">
-        <button @click="add(1)">button1</button>
+        <button @click="add1">{{times1}}</button>
       </Throttle>
     </div>
     <div>
       <Throttle :time="2000" events="click" >
-        <button @click="add(2)">button2</button>
+        <button @click="add2">{{times2}}</button>
       </Throttle>
     </div>
     <div>
       <button @click="reset">reset</button>
-      <!--{{times1}}      {{times2}}-->
     </div>
   </div>
 </template>
@@ -32,9 +31,11 @@
       }
     },
     methods: {
-      add (num) {
-        console.log(num)
-        this['times' + num]++
+      add1 () {
+       this.times1++
+      },
+      add2 () {
+        this.times2++
       },
       reset () {
         this.times1 = 0
