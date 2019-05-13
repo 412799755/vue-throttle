@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div>
-      <Throttle :time="2000" events="click" :isDebounce="true">
+      <Throttle :time="2000" events="click" :isDebounce="true" :isImmediate="true">
         <button @click="add1">{{times1}}</button>
       </Throttle>
     </div>
@@ -12,37 +12,34 @@
     </div>
     <div>
       <button @click="reset">reset</button>
+      {{times1}}
     </div>
   </div>
 </template>
 
 <script>
-  import HelloWorld from './components/HelloWorld.vue'
 
-  export default {
-    name: 'app',
-    components: {
-      HelloWorld
+export default {
+  name: 'app',
+  data () {
+    return {
+      times1: 0,
+      times2: 0
+    }
+  },
+  methods: {
+    add1 () {
+      this.times1++
     },
-    data () {
-      return {
-        times1: 0,
-        times2: 0
-      }
+    add2 () {
+      this.times2++
     },
-    methods: {
-      add1 () {
-       this.times1++
-      },
-      add2 () {
-        this.times2++
-      },
-      reset () {
-        this.times1 = 0
-        this.times2 = 0
-      }
+    reset () {
+      this.times1 = 0
+      this.times2 = 0
     }
   }
+}
 </script>
 
 <style>
