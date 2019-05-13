@@ -1,6 +1,6 @@
 {
   "name": "vue-throttle",
-  "version": "0.2.1",
+  "version": "0.2.3",
   "description": "An abstract component for vuejs users to use",
   "main": "lib/vue-throttle.umd.min.js",
   "private": false,
@@ -34,5 +34,13 @@
     "vue-throttle","throttle"
   ],
   "author": "Luo Yu",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https:///412799755/vue-throttle.git"
+  },
+  "bugs": {
+  "url": "https://github.com/412799755/vue-throttle/issues"
+  },
+  "homepage": "https://github.com/412799755/vue-throttle#readme"
 }

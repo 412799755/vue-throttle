@@ -49,8 +49,6 @@ export default {
     const vnode = this.$slots.default[0]
     this.eventKeys.forEach((key) => {
       const target = vnode.data.on[key]
-      console.log(vnode.data.on[key] === this.originMap[key])
-      console.log(target === this.originMap[key])
       if (target === this.originMap[key] && this.throttledMap[key]) {
         vnode.data.on[key] = this.throttledMap[key]
       } else if (target) {
