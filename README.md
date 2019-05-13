@@ -32,6 +32,9 @@ new Vue({
 
   If `true`, the mode is debounce.  .The default value is 'false' for throttle
 
+* `isImmediate` - Boolean
+
+  If `true`, the function will execute immediately in  debounce mode.The default value is 'false'
 
 ## examples
 
