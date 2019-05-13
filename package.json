@@ -1,6 +1,6 @@
 {
   "name": "vue-throttle",
-  "version": "0.1.1",
+  "version": "0.2.1",
   "description": "An abstract component for vuejs users to use",
   "main": "lib/vue-throttle.umd.min.js",
   "private": false,
